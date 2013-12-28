@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228103848) do
+ActiveRecord::Schema.define(version: 20131228122526) do
 
   create_table "categoria_equipos", force: true do |t|
     t.string   "nombre"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20131228103848) do
   end
 
   create_table "concentradors", force: true do |t|
-    t.integer  "categoria_id"
+    t.integer  "categoria_equipo_id"
     t.string   "nombre"
     t.string   "descripcion"
     t.string   "estado"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20131228103848) do
     t.datetime "updated_at"
   end
 
-  add_index "concentradors", ["categoria_id"], name: "index_concentradors_on_categoria_id", using: :btree
+  add_index "concentradors", ["categoria_equipo_id"], name: "index_concentradors_on_categoria_equipo_id", using: :btree
 
   create_table "medidas", force: true do |t|
     t.integer  "Sensor_id"
