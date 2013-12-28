@@ -1,0 +1,2 @@
+module CategoriaEquiposHelper
+end

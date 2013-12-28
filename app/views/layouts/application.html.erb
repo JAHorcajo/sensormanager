@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sensormanager</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="servtel_main_bg"></div>
+<div class="servtel_main_box">
+<div class="servtel_main_title">Servicios Telematicos</div>
+<div class="servtel_main_menu">
+  <div class="servtel_menu_item"><a href="/categoria_equipos">Categorias</a></div>
+  <div class="servtel_menu_item"><a href="/concentradores">Estaciones</a></div>
+</div>
+
+<div class="servtel_main_area">
+<%= yield %>
+</div>
+
+</div>
+</body>
+</html>
