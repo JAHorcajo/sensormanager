@@ -1,7 +1,8 @@
 <%= semantic_form_for @medida do |f| %>
   <%= f.inputs do %>
     <%= f.input :Sensor %>
-    <%= f.input :fecha %>
+    <%= f.label :Fecha %>
+    <%= f.datetime_select :fecha, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }  %>
     <%= f.input :valor %>
   <% end %>
 

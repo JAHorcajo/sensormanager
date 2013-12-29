@@ -55,7 +55,9 @@ a {
   }
 .servtel_main_box {
   position: absolute;
-  width: 800px;
+    top:20px;
+    left:0px;
+  width: 90%;
   padding: 10px 25px 15px 20px;
   margin: 50px 50px;
   border-radius: 5px 5px 5px 5px;
