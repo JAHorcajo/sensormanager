@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+   <p>
+  	<strong>Usuarios:</strong>
+  	<%= puts Usuario.joins("inner join usuarioequipos on usuarioequipos.Usuarios_id = usuarios.id").where("usuarioequipos.id = ?",params[:id]).select("nombre") %>
+   </p>
+
+   <p>
+  	<strong>Categoria equipos:</strong>
+  	<%= CategoriaEquipo.joins("inner join usuarioequipos on usuarioequipos.Categoria_equipos_id = categoria_equipo.id where usuarioequipos.id = ?", params[:id]).select("categoria_equipo.nombre") %>
+   </p>
+
+<% link_to 'Edit', edit_usuarioequipo_path(@usuarioequipo) %> |
+<%= link_to 'Back', usuarioequipos_path %>

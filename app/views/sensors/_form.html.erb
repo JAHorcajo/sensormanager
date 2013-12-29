@@ -1,6 +1,7 @@
 <%= semantic_form_for @sensor do |f| %>
   <%= f.inputs do %>
-    <%= f.input :Concentrador %>
+    <%= f.label :Concentrador %>
+    <%= f.select :Concentrador, Concentrador.find(:all).collect {|p| [p.nombre, p.id]} %>
     <%= f.input :nombre %>
     <%= f.input :descripcion %>
     <%= f.input :estado %>

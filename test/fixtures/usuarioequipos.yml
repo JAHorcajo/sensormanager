@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Usuarios_id: 
+  categoria_equipos_id: 
+
+two:
+  Usuarios_id: 
+  categoria_equipos_id: 

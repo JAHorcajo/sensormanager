@@ -1,0 +1,10 @@
+<%= semantic_form_for @usuarioequipo do |f| %>
+  <%= f.inputs do %>
+    <%= f.select :Usuarios_id, Usuario.find(:all).collect {|p| [p.nombre, p.id] } %>
+    <%= f.select :categoria_equipos_id, CategoriaEquipo.find(:all).collect {|p| [p.nombre, p.id] } %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

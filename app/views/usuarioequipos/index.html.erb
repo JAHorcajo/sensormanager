@@ -1,0 +1,29 @@
+<h1>Lista Relaciones Equipo Usuario</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuarios</th>
+      <th>Categoria equipos</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuarioequipos.each do |usuarioequipo| %>
+      <tr>
+        <td><%= usuarioequipo.Usuario %></td>
+        <td><%= usuarioequipo.Categoria %></td>
+        <td><%= link_to 'Show', usuarioequipo %></td>
+        <td><%= link_to 'Edit', edit_usuarioequipo_path(usuarioequipo) %></td>
+        <td><%= link_to 'Destroy', usuarioequipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usuarioequipo', new_usuarioequipo_path %>

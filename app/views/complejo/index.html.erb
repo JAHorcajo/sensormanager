@@ -1,0 +1,27 @@
+<h1>Modelo Compejo</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Categoria</th>
+      <th>Concentrador</th>
+      <th>Sensor</th>
+      <th>Parametro</th>
+      <th>Temperatura</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @complejos.each do |complejo| %>
+      <tr>
+        <td><%= complejo.categoria %></td>
+        <td><%= complejo.concentrador %></td>
+        <td><%= complejo.sensor %></td>
+        <td><%= complejo.parametro %></td>
+        <td><%= complejo.valor %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

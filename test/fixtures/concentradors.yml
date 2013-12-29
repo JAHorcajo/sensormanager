@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  categoria_id: 
+  categoria_equipo_id: 
   nombre: MyString
   descripcion: MyString
   estado: MyString
@@ -13,7 +13,7 @@ one:
   ip_port: 1
 
 two:
-  categoria_id: 
+  categoria_equipo_id: 
   nombre: MyString
   descripcion: MyString
   estado: MyString

@@ -18,7 +18,7 @@ class ConcentradorsControllerTest < ActionController::TestCase
 
   test "should create concentrador" do
     assert_difference('Concentrador.count') do
-      post :create, concentrador: { categoria_id: @concentrador.categoria_id, descripcion: @concentrador.descripcion, estado: @concentrador.estado, gis_latitud: @concentrador.gis_latitud, gis_longitud: @concentrador.gis_longitud, ip_address: @concentrador.ip_address, ip_port: @concentrador.ip_port, mac_address: @concentrador.mac_address, nombre: @concentrador.nombre, numero_serie: @concentrador.numero_serie }
+      post :create, concentrador: { categoria_equipo_id: @concentrador.categoria_equipo_id, descripcion: @concentrador.descripcion, estado: @concentrador.estado, gis_latitud: @concentrador.gis_latitud, gis_longitud: @concentrador.gis_longitud, ip_address: @concentrador.ip_address, ip_port: @concentrador.ip_port, mac_address: @concentrador.mac_address, nombre: @concentrador.nombre, numero_serie: @concentrador.numero_serie }
     end
 
     assert_redirected_to concentrador_path(assigns(:concentrador))
@@ -35,7 +35,7 @@ class ConcentradorsControllerTest < ActionController::TestCase
   end
 
   test "should update concentrador" do
-    patch :update, id: @concentrador, concentrador: { categoria_id: @concentrador.categoria_id, descripcion: @concentrador.descripcion, estado: @concentrador.estado, gis_latitud: @concentrador.gis_latitud, gis_longitud: @concentrador.gis_longitud, ip_address: @concentrador.ip_address, ip_port: @concentrador.ip_port, mac_address: @concentrador.mac_address, nombre: @concentrador.nombre, numero_serie: @concentrador.numero_serie }
+    patch :update, id: @concentrador, concentrador: { categoria_equipo_id: @concentrador.categoria_equipo_id, descripcion: @concentrador.descripcion, estado: @concentrador.estado, gis_latitud: @concentrador.gis_latitud, gis_longitud: @concentrador.gis_longitud, ip_address: @concentrador.ip_address, ip_port: @concentrador.ip_port, mac_address: @concentrador.mac_address, nombre: @concentrador.nombre, numero_serie: @concentrador.numero_serie }
     assert_redirected_to concentrador_path(assigns(:concentrador))
   end
 
