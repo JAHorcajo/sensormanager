@@ -1,0 +1,21 @@
+<h1>Categorias de estaciones metereologicas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categoria_concentrador.each do |categoria_concentrador| %>
+      <tr>
+        <td><%= categoria_concentrador.nombre %></td>
+	<td><%= categoria_concentrador.descripcion %></td>
+	<td><%= categoria_concentrador.estado %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -21,6 +21,12 @@ class SensorsController < ApplicationController
   def edit
   end
 
+  # GET /sensors/1/medida
+  # GET /sensors/1.json
+  def medida
+	@sensor_medida = Medida.where("sensor_id = ?", params[:sensor_id])
+  end
+
   # POST /sensors
   # POST /sensors.json
   def create

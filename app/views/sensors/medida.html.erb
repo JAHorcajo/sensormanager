@@ -1,0 +1,19 @@
+<h1>Lista de Medidas de los Sensores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sensor_medida.each do |sensor_medida| %>
+      <tr>
+        <td><%= sensor_medida.fecha %></td>
+        <td><%= sensor_medida.valor %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

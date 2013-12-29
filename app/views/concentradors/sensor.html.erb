@@ -1,0 +1,23 @@
+<h1>Lista de Sensores segun el Concentrador elegido </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Estado</th>
+      <th>Parametro</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concentrador_sensor.each do |concentrador_sensor| %>
+      <tr>
+        <td><%= concentrador_sensor.nombre %></td>
+        <td><%= concentrador_sensor.descripcion %></td>
+        <td><%= concentrador_sensor.estado %></td>
+        <td><%= concentrador_sensor.parametro %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

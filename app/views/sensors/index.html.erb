@@ -1,4 +1,4 @@
-<h1>Listing sensors</h1>
+<h1>Lista de sensores</h1>
 
 <table>
   <thead>
@@ -10,9 +10,10 @@
       <th>Parametro</th>
       <th>Valor</th>
       <th>Uds</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Mostrar</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+      <th>Medidas</th>
     </tr>
   </thead>
 
@@ -29,6 +30,7 @@
         <td><%= link_to 'Show', sensor %></td>
         <td><%= link_to 'Edit', edit_sensor_path(sensor) %></td>
         <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Sensor', sensor_medida_path(sensor) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,5 +1,5 @@
 class CategoriaEquiposController < ApplicationController
-  before_action :set_categoria_equipo, only: [:show, :edit, :update, :destroy]
+  before_action :set_categoria_equipo, only: [:show, :edit, :update, :destroy, :Concentradores]
 
   # GET /categoria_equipos
   # GET /categoria_equipos.json
@@ -20,6 +20,12 @@ class CategoriaEquiposController < ApplicationController
   # GET /categoria_equipos/1/edit
   def edit
   end
+
+  # GET /categoria_equipos/1/concentrador
+  # GET /categoria_equipos/1.json
+  def concentrador
+    @categoria_concentrador = Concentrador.where("categoria_equipo_id = ?", params[:categoria_equipo_id])
+  end 
 
   # POST /categoria_equipos
   # POST /categoria_equipos.json

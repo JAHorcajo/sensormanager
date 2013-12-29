@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Categoria</th>
+      <th>Categoria equipo</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Estado</th>
@@ -13,16 +13,17 @@
       <th>Numero serie</th>
       <th>Ip address</th>
       <th>Ip port</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Mostrar</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+      <th>Listar Sensores</th>
     </tr>
   </thead>
 
   <tbody>
     <% @concentradors.each do |concentrador| %>
       <tr>
-        <td><%= concentrador.categoria %></td>
+        <td><%= concentrador.categoria_equipo %></td>
         <td><%= concentrador.nombre %></td>
         <td><%= concentrador.descripcion %></td>
         <td><%= concentrador.estado %></td>
@@ -35,6 +36,7 @@
         <td><%= link_to 'Show', concentrador %></td>
         <td><%= link_to 'Edit', edit_concentrador_path(concentrador) %></td>
         <td><%= link_to 'Destroy', concentrador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= link_to 'Sensores', concentrador_sensor_path(concentrador) %></td>
       </tr>
     <% end %>
   </tbody>
