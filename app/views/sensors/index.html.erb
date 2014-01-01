@@ -20,7 +20,8 @@
   <tbody>
     <% @sensors.each do |sensor| %>
       <tr>
-        <td><%= sensor.Concentrador %></td>
+	<% @concen = Concentrador.where("concentradors.id = ?", sensor.Concentrador).select("nombre") %>
+        <td><%= @concen[0].nombre %></td>
         <td><%= sensor.nombre %></td>
         <td><%= sensor.descripcion %></td>
         <td><%= sensor.estado %></td>
@@ -39,3 +40,29 @@
 <br>
 
 <%= link_to 'New Sensor', new_sensor_path %>
+
+<h1 class="titulo2"> Imagenes Tomadas por Sensores </h1>
+<section id="gallery2">
+	<div class="pics">
+		<%= image_tag "Foto1.jpg", :alt => "Manantial 1", :width => "495", :height => "329" %>
+		<%= image_tag "foto2.jpg", :alt => "Manantial 2", :width => "495", :height => "329" %>
+		<%= image_tag "foto3.jpg", :alt => "Rocas 1", :width => "495", :height => "329" %>
+                <%= image_tag "foto4.jpg", :alt => "Montaña ", :width => "495", :height => "329" %>
+                <%= image_tag "foto6.jpg", :alt => "Cascada 1", :width => "495", :height => "329" %> 
+                <%= image_tag "foto7.jpg", :alt => "Cielo 1", :width => "495", :height => "329" %>
+                <%= image_tag "foto8.jpg", :alt => "Pradesras 1", :width => "495", :height => "329" %> 
+                <%= image_tag "foto9.jpg", :alt => "Boreal 1", :width => "495", :height => "329" %> 
+	</div>
+	<a href="#" id="prev"></a>
+	<a href="#" id="next"></a>
+</section>  
+
+<script type="text/javascript">
+     $(document).ready(function() {
+       $('.pics').cycle({
+         fx: 'toss',
+         next:   '#next',
+         prev:   '#prev'
+        });
+     });
+</script>

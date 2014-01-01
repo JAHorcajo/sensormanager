@@ -1,7 +1,6 @@
 <%= semantic_form_for @concentrador do |f| %>
   <%= f.inputs do %>
-    <%= f.label :categoria_equipo %>
-    <%= f.select :categoria_equipo, CategoriaEquipo.find(:all).collect {|p| [p.nombre, p.id] } %> 
+    <%= f.input :categoria_equipo, :collection => CategoriaEquipo.all.collect {|p| [p.nombre, p.id]}, :include_blank => "--Seleccione una Categoria --" %>
     <%= f.input :nombre %>
     <%= f.input :descripcion %>
     <%= f.input :estado %>

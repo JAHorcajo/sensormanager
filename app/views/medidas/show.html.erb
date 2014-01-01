@@ -2,7 +2,8 @@
 
 <p>
   <strong>Sensor:</strong>
-  <%= @medida.Sensor %>
+  <% @senso = Sensor.where("sensors.id = ?", @medida.Sensor).select("nombre") %>
+  <%= @senso[0].nombre %>
 </p>
 
 <p>

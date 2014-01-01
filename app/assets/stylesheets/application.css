@@ -43,7 +43,7 @@ a {
   }
 .servtel_main_bg {
   -moz-user-select: none;
-  background: url("/img/excellent_weather.jpg") repeat fixed 0 0 blue;
+  background: url("/img/excellent_weather.jpg") repeat-y fixed 0 0 blue;
   background-size: cover;
   top: 0;
   left: 0;
@@ -93,3 +93,5 @@ a {
 .servtel_menu_item a:visited {
   color: #ccff66;
   }
+
+@import "Galeria.css";

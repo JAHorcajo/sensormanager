@@ -23,7 +23,8 @@
   <tbody>
     <% @concentradors.each do |concentrador| %>
       <tr>
-        <td><%= concentrador.categoria_equipo %></td>
+	<% @concentra = Concentrador.where("concentradors.id = ?",concentrador.categoria_equipo).select("nombre") %>
+        <td><%= @concentra[0].nombre %></td>
         <td><%= concentrador.nombre %></td>
         <td><%= concentrador.descripcion %></td>
         <td><%= concentrador.estado %></td>

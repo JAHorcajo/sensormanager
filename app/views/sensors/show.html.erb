@@ -2,7 +2,8 @@
 
 <p>
   <strong>Concentrador:</strong>
-  <%= @sensor.Concentrador %>
+  <% @nombre = Concentrador.where("concentradors.id = ?", @sensor.Concentrador).select("nombre") %>
+  <%= @nombre[0].nombre %>
 </p>
 
 <p>

@@ -1,5 +1,5 @@
 class UsuarioequiposController < ApplicationController
-  before_action :set_usuarioequipo, only: [:show, :edit, :update, :destroy, :select_usuario]
+  before_action :set_usuarioequipo, only: [:show, :edit, :update, :destroy]
 
   # GET /usuarioequipos
   # GET /usuarioequipos.json
@@ -10,7 +10,7 @@ class UsuarioequiposController < ApplicationController
   # GET /usuarioequipos/1
   # GET /usuarioequipos/1.json
   def show
-    @usuarioequipos = Usuarioequipo.joins("inner join usuarios on usuarios.id = usuarioequipos.Usuarios_id inner join categoria_equipos on categoria_equipos.id = usuarioequipos.Categoria_equipos_id").select("usuarioequipos.id,usuarios.nombre as Usuario, categoria_equipos.nombre as Categoria").order("usuarioequipos.id ASC").where("usuarioequipos.id = ?",params[:id])
+    @usuario_equipos = Usuarioequipo.joins("inner join usuarios on usuarios.id = usuarioequipos.Usuarios_id inner join categoria_equipos on categoria_equipos.id = usuarioequipos.Categoria_equipos_id").where("usuarioequipos.id = ?",params[:id]).select("usuarioequipos.id ,usuarios.nombre as Usuario, categoria_equipos.nombre as Categoria")
   end
 
   # GET /usuarioequipos/new

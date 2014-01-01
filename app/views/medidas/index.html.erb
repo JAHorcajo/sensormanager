@@ -15,7 +15,8 @@
   <tbody>
     <% @medidas.each do |medida| %>
       <tr>
-        <td><%= medida.Sensor %></td>
+	<% @nombre = Sensor.where("sensors.id = ?", medida.Sensor).select("nombre") %>
+        <td><%= @nombre[0].nombre  %></td>
         <td><%= medida.fecha %></td>
         <td><%= medida.valor %></td>
         <td><%= link_to 'Show', medida %></td>

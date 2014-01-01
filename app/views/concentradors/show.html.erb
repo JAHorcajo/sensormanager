@@ -2,7 +2,8 @@
 
 <p>
   <strong>Categoria equipo:</strong>
-  <%= @concentrador.categoria_equipo %>
+  <% @concentra = Concentrador.where("concentradors.id = ?",@concentrador.categoria_equipo).select("nombre") %>
+  <%= @concentra[0].nombre %>
 </p>
 
 <p>
