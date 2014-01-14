@@ -1,10 +1,21 @@
 class UsuariosController < ApplicationController
-  before_action :set_usuario, only: [:show, :edit, :update, :destroy]
+  before_action :set_usuario, only: [:show, :edit, :update, :destroy, :enviarCorreo]
 
   # GET /usuarios
   # GET /usuarios.json
   def index
     @usuarios = Usuario.all
+  end
+
+  def enviarCorreo
+	# Llamamos al ActionMailer que creamos
+	ActionCorreo.sensores_email(params[:id]).deliver
+	respond_to do |format|
+		format.html { redirect_to usuarios_url }
+		format.json { head :no_content }
+	end 
+	# mostramos el usuario en formato JSON
+	#render json: @sensores
   end
 
   # GET /usuarios/1

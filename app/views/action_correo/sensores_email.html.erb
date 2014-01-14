@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<h1>Datos Obtenidos Por Los Sensores</h1>
+		<p> Aqui tiene los datos obtenidos por los sensores del concentrador seleccionado </p>
+		<table>
+			<thead>
+				<tr>
+					<th>Categoria</th>
+					<th>Concentrador</th>
+					<th>Sensor</th>
+					<th>Parametro</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <% @sensores.each do |sensor| %>
+				<tr>
+					<td><%= sensor.categoria %></td>
+					<td><%= sensor.concentrador %></td>
+					<td><%= sensor.sensor %></td>
+					<td><%= sensor.parametro %></td>
+					<td><%= sensor.valor %></td> 
+				</tr>
+			    <% end %>
+			</tbody>
+		</table>
+	</body>
+</html> 
+

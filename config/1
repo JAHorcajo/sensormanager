@@ -1,8 +1,7 @@
 Sensormanager::Application.routes.draw do
 
   #para mandar el mail
-
-  get 'usuarios/:id/enviarCorreo' => 'usuarios#enviarCorreo', as: :enviarCorreo
+  get 'usuarios/:id' => 'usuarios#enviarCorreo'
 
   resources :usuarios
 
